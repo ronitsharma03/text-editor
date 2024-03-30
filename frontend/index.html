@@ -4,52 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Live preview</title>
 </head>
 
 <body>
-    
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-items"><a href="">Download</a></li>
-                <li class="nav-items"><a href="">Contact</a></li>
-                <li class="nav-items"><a href="">Github</a></li>
-                <div>
-                    <button onclick="run()">Run</button>
-                    <button>New Tab</button>
 
-                </div>
-            </ul>
-        </nav>
-    
+    <nav class="nav">
+        <ul class="nav-list">
+            <span><i class="fa-solid fa-pen"></i> Live Pen <span class="beta">Beta</span></span>
+            <li class="nav-items"><a href="" onclick="downloadContent()"><i class="fa-solid fa-download"></i> Download</a></li>
+            <li class="nav-items"><a href="https://github.com/ronitsharma03" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
+            <div class="buttons-div">
+                <input placeholder="Font size" id="font-size" onchange="changeFontSize()" type="number" min="16" max="22">
+                <button class="btn-1 btn" onclick="run()"><i class="fa-solid fa-play"></i> Run</button>
+
+            </div>
+        </ul>
+    </nav>
+    <div class="upper-bound">
+
+    </div>
+
     <section class="outer-container">
 
         <div class="files-container">
 
             <div class="raw-html">
-                <label for="html-file">HTML</label>
+                <label for="html-file text"><i class="fa-brands fa-2x fa-html5 html-icon"></i> HTML</label>
                 <textarea placeholder="Write HTML here" class="text-area" id="html-file" rows="17"></textarea>
 
             </div>
 
             <div class="css-file">
-                <label for="style-css">CSS</label>
+                <label for="style-css"><i class="fa-brands fa-css3-alt fa-2x css-icon"></i> CSS</label>
                 <textarea placeholder="Write CSS here" class="text-area" id="style-css" cols="30" rows="17"></textarea>
 
             </div>
 
             <div class="javascript-file">
-                <label for="javascript-file">JS</label>
+                <label for="javascript-file"><i class="fa-brands fa-js fa-2x js-icon"></i> JS</label>
                 <textarea placeholder="Write JS here" class="text-area" id="javascript-file" cols="30"
                     rows="17"></textarea>
             </div>
         </div>
 
-
-
         <div class="result">
-            <iframe id="code-output"></iframe>
+            <label for="code-output"><i class="fa-solid fa-play"></i> Output</label> <hr>
+            <iframe id="code-output">
+
+            </iframe>
+        </div>
+
+        <div class="footer">
+            <p class="name">Made with <i class="fa-solid fa-heart"></i> by <a href="https://twitter.com/devXronit" target="_blank"> <i> <span class="atr">@devXronit</span></i> </a></p> 
+            <p class="atr"><i>Copyright &copy; devXronit</i> </p>
         </div>
 
     </section>
