@@ -7,6 +7,26 @@ function run() {
     iframeDocument = iframe.contentDocument;
     iframeDocument.body.innerHTML = htmlCode + "<style>"+cssCode+"</style";
     iframe.contentWindow.eval(jsCode);
+
+    // Check if newTab is already opened
+    if (typeof newTab === "undefined" || newTab.closed) {
+        // If not opened or closed, open a new window/tab
+        newTab = window.open("", "_blank");
+    }
+    let newTabDocument = newTab.document;
+
+    // Clear existing content
+    newTabDocument.open();
+
+    // Write HTML, CSS, and JS to the new tab
+    newTabDocument.write(
+        "<!DOCTYPE html><html><head><title>Live</title>" +
+        "<style>" + cssCode + "</style></head><body>" +
+        htmlCode + "<script>" + jsCode + "</script></body></html>"
+    );
+
+    // Close the document for writing
+    newTabDocument.close();
     
 }
 
