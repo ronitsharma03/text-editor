@@ -66,6 +66,7 @@ span{
     border: none;
     outline: none;
     background-color: #303030;
+    border-radius: 5px;
     color: #fff;
     font-size: large;
     /* overflow-y: hidden; */
@@ -142,10 +143,23 @@ a {
 .btn-1:hover{
     background-color: #2e8349;
     color: #fff;
+    transition: 0.3s ease all;
+
 }
 .btn-2{
-    width: 130px;
+    width: 110px;
     font-size: 1rem;
+    background: transparent;
+    outline: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 6px;
+    border-radius: 8px;
+}
+.btn-2:hover{
+    background-color: #fff;
+    color: #030303;
+    transition: 0.3s ease all;
 }
 .footer{
     height: 300px;
