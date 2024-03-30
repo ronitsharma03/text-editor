@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Live preview</title>
+</head>
+
+<body>
+    <section class="outer-container">
+
+        <div class="files-container">
+
+            <div class="raw-html">
+
+                <textarea class="text-area" id="html-file" onkeyup="run()" cols="30" rows="10"></textarea>
+
+            </div>
+
+            <div class="css-file">
+
+                <textarea class="text-area" id="style-css" onkeyup="run()" cols="30" rows="10"></textarea>
+
+            </div>
+
+            <div class="javascript-file">
+
+                <textarea class="text-area" id="javascript-file" onkeyup="run()" cols="30" rows="10"></textarea>
+
+            </div>
+        </div>
+
+
+
+        <div class="result">
+            <iframe id="code-output" frameborder="5"></iframe>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
