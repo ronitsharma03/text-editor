@@ -9,33 +9,47 @@
 </head>
 
 <body>
+    
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-items"><a href="">Download</a></li>
+                <li class="nav-items"><a href="">Contact</a></li>
+                <li class="nav-items"><a href="">Github</a></li>
+                <div>
+                    <button onclick="run()">Run</button>
+                    <button>New Tab</button>
+
+                </div>
+            </ul>
+        </nav>
+    
     <section class="outer-container">
 
         <div class="files-container">
 
             <div class="raw-html">
-
-                <textarea class="text-area" id="html-file" onkeyup="run()" cols="30" rows="10"></textarea>
+                <label for="html-file">HTML</label>
+                <textarea placeholder="Write HTML here" class="text-area" id="html-file" rows="17"></textarea>
 
             </div>
 
             <div class="css-file">
-
-                <textarea class="text-area" id="style-css" onkeyup="run()" cols="30" rows="10"></textarea>
+                <label for="style-css">CSS</label>
+                <textarea placeholder="Write CSS here" class="text-area" id="style-css" cols="30" rows="17"></textarea>
 
             </div>
 
             <div class="javascript-file">
-
-                <textarea class="text-area" id="javascript-file" onkeyup="run()" cols="30" rows="10"></textarea>
-
+                <label for="javascript-file">JS</label>
+                <textarea placeholder="Write JS here" class="text-area" id="javascript-file" cols="30"
+                    rows="17"></textarea>
             </div>
         </div>
 
 
 
         <div class="result">
-            <iframe id="code-output" frameborder="5"></iframe>
+            <iframe id="code-output"></iframe>
         </div>
 
     </section>
