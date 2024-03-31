@@ -44,7 +44,8 @@ function downloadContent() {
     // Prompt the user for the filename
     let fileName = window.prompt("Enter the filename:", "code_content.txt");
 
-    // Get the content of each textarea
+    if(fileName){
+        // Get the content of each textarea
     let htmlContent = document.getElementById("html-file").value;
     let cssContent = document.getElementById("style-css").value;
     let jsContent = document.getElementById("javascript-file").value;
@@ -62,6 +63,10 @@ function downloadContent() {
 
     // Trigger the download
     a.click();
+    }
+    else{
+        alert("Download canceled");
+    }
 }
 
 
